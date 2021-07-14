@@ -147,13 +147,13 @@ body{
 .bottom-banner-left{
     width: 50%;
     margin-right: 66px;
-    margin-top: 59px;
+    margin-top: 50px;
 }
 .bottom-banner-left h2{
     font-weight: bold;
     font-size: 48px;
-    color: #0A0826; 
-    margin: 8px 0px;
+    color: #0A0826;  
+    margin: 0;
 }
 .bottom-banner-left p{
     font-size: 16px;
@@ -186,7 +186,7 @@ body{
  -------------*/
  .section-title{
      text-align: center;
-     margin-top:100px
+     margin-top:156px
  }
  .section-title h1{ 
      text-transform: capitalize;
@@ -399,20 +399,39 @@ Mobile Layout: 320px.
          width: 100%;
          padding: 0 15px;
      }
+/* players section  */
      .players{
         grid-template-columns: 1fr;
         grid-gap: 15px 24px;
      }
- 
-     .interview-container{
-         display: none;
+/* bottom banner section  */
+     .bottom-banner{
+         flex-direction: column;
+         margin-top: 60px;
      }
- .bottom-banner{
-     display: none;
- }
- footer{
-     display: none;
- }
+     .bottom-banner-left{
+         width: 100%;
+         margin: 0;
+     }
+     .bottom-banner-left h2{
+         width: 100%;
+         margin: 0;
+         font-size: 30px;
+     }
+     .bottom-banner-right{
+         width: 100%;
+         margin-top: 29px;
+     }
+
+/* footer section  */
+ 
+    footer{
+        margin-top: 54px;
+        padding: 0 18px;
+    }
+    .footer-logo img{
+        width: 100%;
+    }
 
 }
 
