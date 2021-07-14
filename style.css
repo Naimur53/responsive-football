@@ -182,7 +182,7 @@ body{
 }
 
 /*----------------
-  interview section style 
+    section title style 
  -------------*/
  .section-title{
      text-align: center;
@@ -190,9 +190,15 @@ body{
  }
  .section-title h1{ 
      text-transform: capitalize;
- }
+ } 
  .section-title span{
      color: #E02C6D;
+ }
+/*----------------
+  interview section style 
+ -------------*/
+ .interview-wrapper{
+     margin-bottom: 158px; 
  }
  .interview-player-container{
     position:relative;
@@ -352,7 +358,55 @@ footer{
 ------------------------------- */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-	
+/* top banner  */
+           .banner-area{
+            flex-direction: column; 
+            padding:0 16px 0 16px; 
+        }
+        .banner-left{
+            width: 100%; 
+            margin-bottom: 50px; 
+        }
+        .banner-left h1{
+            font-size: 45px; 
+         }
+         .banner-right{
+            width: 100%;  
+         }
+         .banner-right img{
+            width: 100%;  
+         }
+            
+/* main section  */
+     .container{
+        width: 100%;
+        padding: 0 15px;
+    }
+/* players section  */
+    .players{
+       grid-template-columns: repeat(2,1fr);
+       grid-gap: 15px 24px;
+    }
+/* bottom banner section  */
+    .bottom-banner{
+        flex-direction: column;
+        margin-top: 60px;
+    }
+    .bottom-banner-left{
+        width: 100%;
+        margin: 0;
+    }
+    .bottom-banner-left h2{
+        width: 100%;
+        margin: 0;
+        font-size: 30px;
+    }
+    .bottom-banner-right{
+        width: 100%;
+        margin-top: 29px;
+    }
+
+         
 	 
 }
 
@@ -368,7 +422,7 @@ px      68    160    252    */
 
 @media only screen and (max-width: 767px) {
 	
-	 
+
 	
 }
 
@@ -379,6 +433,7 @@ Mobile Layout: 320px.
 ------------------------------*/
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
+    /* top banner  */
 	.banner-area{
         flex-direction: column; 
         padding:0 16px 0 16px; 
@@ -424,6 +479,9 @@ Mobile Layout: 320px.
      }
 
 /* interview section  */
+    .interview-wrapper{
+        margin-bottom: 100px; 
+    } 
     .interview-player-container .interview-player.player1{ 
         background-position:top center; 
     }
