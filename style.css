@@ -423,11 +423,21 @@ Mobile Layout: 320px.
          margin-top: 29px;
      }
 
+/* interview section  */
+    .interview-player-container .interview-player.player1{ 
+        background-position:top center; 
+    }
+    .interview-player-container .interview-player.player2{
+        background-position:top center; 
+    }
+    .interview-player-container .interview-player.player3{
+        background-position:top center; 
+    }
 /* footer section  */
  
     footer{
         margin-top: 54px;
-        padding: 0 18px;
+        padding: 0 18px 187px 18px;
     }
     .footer-logo img{
         width: 100%;
