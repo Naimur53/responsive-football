@@ -17,8 +17,7 @@ body{
 
 .banner-area{ 
     padding: 100px 156px 0 140px; 
-    display: flex;
-    justify-content: space-between;
+    display: flex; 
     background-color: #2D25A0; 
     height: 100vh;
 }
@@ -31,7 +30,7 @@ body{
     margin-top: 50px;
 }
 .banner-left h1{
-    font-weight: bold;
+    font-weight: 700;
     font-size: 64px;
     color: #fff;
 }
@@ -39,7 +38,7 @@ body{
     display: inline-block; 
     padding: 10px 24px;   
     text-decoration: none;
-    margin-top: 10px;
+    margin-top: 27px;
     color: #fff; 
     transition: all .3s;
     position: relative;
@@ -116,6 +115,10 @@ body{
     grid-row-gap: 27px;
 }
 .player{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 15px 15px 33px 15px; 
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15); 
 }
@@ -337,3 +340,80 @@ footer{
 .copyright p{
     margin-top: 20px;
 }
+
+/*----------------------------------------------------------
+                    responsive css
+                    using s media query
+--------------------------------------------- */ 
+ 
+
+/*-------------
+	Tablet Layout: 768px.
+------------------------------- */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+	 
+}
+
+
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+	
+	 
+	
+}
+
+
+
+/*----------------------------	  
+Mobile Layout: 320px.
+------------------------------*/
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	.banner-area{
+        flex-direction: column; 
+        padding:0 16px 0 16px; 
+    }
+    .banner-left{
+        width: 100%;
+        margin-bottom: 50px; 
+    }
+    .banner-left h1{
+        font-size: 36px; 
+     }
+     .banner-right{
+         width: 100%;
+     }
+     
+/* main section  */
+     .container{
+         width: 100%;
+         padding: 0 15px;
+     }
+     .players{
+        grid-template-columns: 1fr;
+        grid-gap: 15px 24px;
+     }
+ 
+     .interview-container{
+         display: none;
+     }
+ .bottom-banner{
+     display: none;
+ }
+ footer{
+     display: none;
+ }
+
+}
+
+ 
