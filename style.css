@@ -35,19 +35,59 @@ body{
     font-size: 64px;
     color: #fff;
 }
-.main-button{ 
+.banner-left a{ 
     display: inline-block; 
     padding: 10px 24px;   
     text-decoration: none;
-    background-color: #E02C6D;
-    color: #fff;
-    border: 1px solid transparent;
+    margin-top: 10px;
+    color: #fff; 
     transition: all .3s;
+    position: relative;
+    z-index: 100;
+}
+.banner-left a::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0; 
+    width: 50%;
+    height: 100%;
+    background: #E02C6D;
+    z-index: -1;
+    transform: translateY(50%) skew(30deg) scaleY(.7);
+    transition:transform .3s;
+    box-shadow: -8px 2px 5px rgb(0 0 0 / 20%);
+}
+.banner-left a::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0; 
+    width: 50%;
+    height: 100%;
+    background: #E02C6D;
+    z-index: -1;
+    transform: translateY(-50%) skew(30deg) scaleY(.7);
+    transition:transform .3s;
+    box-shadow: 8px 2px 5px rgb(0 0 0 / 20%);
+}
+.banner-left a:hover::before{
+    transform: translateY(0%);  
+    box-shadow: none;
+}
+.main-button:hover::after{
+    transform: translateY(0%); 
+    box-shadow: none;
+
 }
 .main-button:hover{
-    background-color: #fff;
+    /* background-color: #fff;
     color: #E02C6D;
-    border-color: #E02C6D;
+    border-color: #E02C6D; */
+    box-shadow: 8px 2px 5px rgb(0 0 0 / 30%);
+
 }
 .banner-left i{
     margin-left: 10px; 
@@ -99,7 +139,8 @@ body{
 .bottom-banner{
     margin-top: 165px;
     display: flex;
-}
+    position: relative;
+} 
 .bottom-banner-left{
     width: 50%;
     margin-right: 66px;
@@ -116,9 +157,20 @@ body{
     color: #6C6C6C;
 }
 .bottom-banner-left a{ 
-    margin-top:24px ;
+    display: inline-block; 
+    margin-top:24px;    
+    padding: 10px 24px;   
+    text-decoration: none; 
+    color: #fff;
+    background-color: #E02C6D;
+    border: 1px solid transparent;
+    transition: all .3s; 
 }
-
+.bottom-banner-left a:hover{
+    background-color: #fff;
+    color: #E02C6D;
+    border-color: #E02C6D;
+}
 .bottom-banner-right{
     width: 50%; 
 }
@@ -126,11 +178,121 @@ body{
     width: 100%; 
 }
 
+/*----------------
+  interview section style 
+ -------------*/
+ .section-title{
+     text-align: center;
+     margin-top:100px
+ }
+ .section-title h1{ 
+     text-transform: capitalize;
+ }
+ .section-title span{
+     color: #E02C6D;
+ }
+ .interview-player-container{
+    position:relative;
+    margin-top: 50px;
+    width: 100%;
+    height:500px; 
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15); 
+ }
+ .interview-player-container .interview-player{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transition:0.5s;
+}
+.interview-player-container .interview-player.player1{
+    background:url(elements/images/players/messi.jpg);
+    background-size:cover;
+    clip-path: polygon(0 0, 55% 0, 20% 100%, 0% 100%);
+}
+.interview-player-container .interview-player.player2{
+    background:url(elements/images/players/neymar.jpg);
+    background-size:cover;
+    clip-path: polygon(55% 0, 100% 0, 45% 100%, 20% 100%);
+}
+.interview-player-container .interview-player.player3{
+    background:url(elements/images/players/salha.jpg);
+    background-size:cover;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 45% 100%);
+}
+.interview-player-container:hover .interview-player{
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+.interview-player-container .interview-player:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.interview-player-content{ 
+    position: absolute;
+    bottom:-100%;
+    left:0;
+    width:100%;
+    height: 100%;
+    padding:3%;
+    background:rgba(255,255,255,0.1); 
+    color: rgb(218, 218, 218);
+    backdrop-filter:blur(5px);
+    opacity:0;
+    transition:0.5s;
+}
+.interview-player-content h2{
+    margin-top: 30px;
+    margin-bottom: 20px;
 
-
-
-
-/* footer section style  */
+}
+.interview-player-container .interview-player:hover .interview-player-content{
+    bottom:0;
+    right: 0;
+    left: 0;
+    opacity:1;
+}
+/*---------------------------------------
+     subscribe section style  
+--------------------------------*/
+.subscribe-wrapper{
+    margin-top: 70px;
+    background-image: url(/elements/images/stediums.jpg);
+    background-size: cover; 
+    background-attachment: fixed;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe-content{
+    text-align: center;  
+    color: #fff;
+    padding: 20px; 
+}
+.subscribe-content h1{  
+    margin-bottom: 20px;
+}
+.subscribe-content h1 span{ 
+    color: #E02C6D; 
+}
+.subscribe-button{
+    display: inline-block; 
+    margin-top:24px;    
+    padding: 10px 24px;   
+    text-decoration: none; 
+    color: #fff;
+    background-color: #E02C6D;
+    border: 1px solid transparent;
+    transition: all .3s;   
+}
+.subscribe-button:hover{
+    color: #E02C6D;
+    background-color: transparent;
+    border-color: #E02C6D;
+}
+/*---------------
+     footer section style  
+--------------------*/
 footer{
     display: flex;
     justify-content: center;
