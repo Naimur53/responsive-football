@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-/* default css in body  */
+/* default font  in body  */
 body{
     font-family: 'Poppins', sans-serif;
 }
@@ -44,6 +44,7 @@ body{
     position: relative;
     z-index: 100;
 }
+/* adding button style with before after  */
 .banner-left a::before{
     content: "";
     display: inline-block;
@@ -72,34 +73,32 @@ body{
     transition:transform .3s;
     box-shadow: 8px 2px 5px rgb(0 0 0 / 20%);
 }
+/* button hover  */
 .banner-left a:hover::before{
     transform: translateY(0%);  
     box-shadow: none;
 }
-.main-button:hover::after{
+.banner-left a:hover::after{
     transform: translateY(0%); 
-    box-shadow: none;
-
-}
-.main-button:hover{
-    /* background-color: #fff;
-    color: #E02C6D;
-    border-color: #E02C6D; */
-    box-shadow: 8px 2px 5px rgb(0 0 0 / 30%);
-
-}
+    box-shadow: none; 
+} 
 .banner-left i{
     margin-left: 10px; 
 }
+
 /* ---------------------------- 
     banner right div style  
 -------------------------------*/
+
 .banner-right{
     width: 50%;
 }
 .banner-right img{
     width: 100%;
 }
+
+/* banner section style end  */
+
 /*---------------------
  main section style start 
  -----------------------*/
@@ -136,9 +135,11 @@ body{
     color:#6C6C6C;
     font-size: 16px;
 }
-/* -----------
+
+/* -------------------------------
     bottom banner style 
------------------*/
+----------------------------------*/
+
 .bottom-banner{
     margin-top: 165px;
     display: flex;
@@ -179,11 +180,12 @@ body{
 }
 .bottom-banner-right img{
     width: 100%; 
-}
+} 
 
-/*----------------
+/*----------------------------
     section title style 
- -------------*/
+ ------------------------*/
+
  .section-title{
      text-align: center;
      margin-top:156px
@@ -194,11 +196,13 @@ body{
  .section-title span{
      color: #E02C6D;
  }
-/*----------------
+
+/*-----------------------------
   interview section style 
- -------------*/
+ -----------------------------*/
+
  .interview-wrapper{
-     margin-bottom: 158px; 
+    margin-bottom: 158px; 
  }
  .interview-player-container{
     position:relative;
@@ -215,6 +219,9 @@ body{
     height:100%;
     transition:0.5s;
 }
+
+/* all interview player container clip path  */
+
 .interview-player-container .interview-player.player1{
     background:url(elements/images/players/messi.jpg);
     background-size:cover;
@@ -230,9 +237,11 @@ body{
     background-size:cover;
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 45% 100%);
 }
+/* interview  container hover effect  */
 .interview-player-container:hover .interview-player{
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
 }
+/* interview player  hover effect  */ 
 .interview-player-container .interview-player:hover{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
@@ -251,8 +260,7 @@ body{
 }
 .interview-player-content h2{
     margin-top: 30px;
-    margin-bottom: 20px;
-
+    margin-bottom: 20px; 
 }
 .interview-player-container .interview-player:hover .interview-player-content{
     bottom:0;
@@ -264,14 +272,14 @@ body{
      subscribe section style  
 --------------------------------*/
 .subscribe-wrapper{
-    margin-top: 70px;
-    background-image: url(elements/images/stediam.jpg);
-    background-size: cover; 
-    background-attachment: fixed;
     height: 500px;
+    margin-top: 70px; 
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(elements/images/stediam.jpg);
+    background-size: cover; 
+    background-attachment: fixed; 
 }
 .subscribe-content{
     text-align: center;  
@@ -299,9 +307,11 @@ body{
     background-color: transparent;
     border-color: #E02C6D;
 }
+
 /*---------------
      footer section style  
 --------------------*/
+
 footer{
     display: flex;
     justify-content: center;
@@ -349,7 +359,7 @@ footer{
 
 /*----------------------------------------------------------
                     responsive css
-                    using s media query
+                    using media query
 --------------------------------------------- */ 
  
 
@@ -358,39 +368,55 @@ footer{
 ------------------------------- */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-/* top banner  */
-           .banner-area{
-            flex-direction: column; 
-            padding:0 16px 0 16px; 
-        }
-        .banner-left{
-            width: 100%; 
-            margin-bottom: 50px; 
-        }
-        .banner-left h1{
-            font-size: 45px; 
-         }
-         .banner-right{
-            width: 100%;  
-         }
-         .banner-right img{
-            width: 100%;  
-         }
+    /*-----------------
+     top banner  
+     --------------*/
+    .banner-area{
+        flex-direction: column; 
+        padding:0 16px 0 16px; 
+    }
+    .banner-left{
+        width: 100%; 
+        margin-bottom: 50px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner-left h1{
+        font-size: 48px; 
+    }
+    .banner-right{
+         width: 100%;  
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+    }
+    .banner-right img{
+        width: 50%;  
+    }
             
-/* main section  */
-     .container{
+    /*------------------------ 
+     main section 
+    ------------------------ */
+    .container{
         width: 100%;
         padding: 0 15px;
     }
-/* players section  */
+    /*------------
+     players section
+    ----------------*/
     .players{
-       grid-template-columns: repeat(2,1fr);
-       grid-gap: 15px 24px;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 15px 24px;
     }
-/* bottom banner section  */
+    /*-------------
+     bottom banner section
+     --------------------*/
     .bottom-banner{
         flex-direction: column;
-        margin-top: 60px;
+        margin-top: 100px;
     }
     .bottom-banner-left{
         width: 100%;
@@ -399,41 +425,22 @@ footer{
     .bottom-banner-left h2{
         width: 100%;
         margin: 0;
-        font-size: 30px;
+        font-size: 36px;
     }
     .bottom-banner-right{
         width: 100%;
         margin-top: 29px;
-    }
-
-         
-	 
+    }     
 }
-
-
-
-/*		Mobile Layout: 320px.
-		Gutters: 24px.
-		Outer margins: 34px.
-		Inherits styles from: Default Layout.
----------------------------------------------
-cols    1     2      3
-px      68    160    252    */
-
-@media only screen and (max-width: 767px) {
-	
-
-	
-}
-
-
-
+ 
 /*----------------------------	  
-Mobile Layout: 320px.
+Mobile Layout: 360px.
 ------------------------------*/
 
-@media only screen and (min-width: 320px) and (max-width: 767px) {
-    /* top banner  */
+@media only screen and (min-width: 360px) and (max-width: 767px) {
+    /*----------------
+     top banner
+      -----------------*/
 	.banner-area{
         flex-direction: column; 
         padding:0 16px 0 16px; 
@@ -444,22 +451,31 @@ Mobile Layout: 320px.
     }
     .banner-left h1{
         font-size: 36px; 
-     }
-     .banner-right{
+    }
+    .banner-left a{
+        margin-left: 15px;
+    }
+    .banner-right{
          width: 100%;
-     }
+    }
      
-/* main section  */
+    /*-------------
+    main section
+    -------------*/
      .container{
          width: 100%;
          padding: 0 15px;
      }
-/* players section  */
+    /*---------------
+     players section
+     -----------------*/
      .players{
         grid-template-columns: 1fr;
         grid-gap: 15px 24px;
      }
-/* bottom banner section  */
+    /*----------------
+     bottom banner section
+    -----------------*/
      .bottom-banner{
          flex-direction: column;
          margin-top: 60px;
@@ -478,10 +494,15 @@ Mobile Layout: 320px.
          margin-top: 29px;
      }
 
-/* interview section  */
+    /*-------------
+     interview section
+    ------------------*/
     .interview-wrapper{
         margin-bottom: 100px; 
     } 
+    .section-title  {
+        margin-top: 60px;
+    }
     .interview-player-container .interview-player.player1{ 
         background-position:top center; 
     }
@@ -491,7 +512,15 @@ Mobile Layout: 320px.
     .interview-player-container .interview-player.player3{
         background-position:top center; 
     }
-/* footer section  */
+    /*-----------
+     subscribe section 
+     -------------------*/
+    .subscribe-wrapper{
+        background-position: top center;
+    }
+    /* ---------------
+     footer section  
+     -----------*/
  
     footer{
         margin-top: 54px;
@@ -502,5 +531,5 @@ Mobile Layout: 320px.
     }
 
 }
-
+/* ---------------------------end----------------------- */
  
